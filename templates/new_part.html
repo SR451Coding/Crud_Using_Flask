@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>New part</h2>
+
+<form action="" method="post">
+
+  <label for="pname">Part name:</label>
+    <input type="text" id="pname" name="pname" required>
+
+  <input onclick="insert()" type="submit" value="Insert"  />
+
+ <script>
+
+<script>
+function insert() {
+  var x = document.getElementById("pname").required;
+}
+</script>
+
+</form><br>
+
+{% endblock body %}

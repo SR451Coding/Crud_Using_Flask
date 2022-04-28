@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div>
+        <script type="text/javascript">
+            {% if p_message%}
+
+                part('{{ p_message }}')
+
+            {% endif %}
+
+            {% if v_message%}
+
+                vendor('{{ v_message }}')
+
+            {% endif %}
+
+            function vendor(message) {
+    alert(message);
+    window.location.replace("http://localhost:5000/vendor");
+}
+
+  function part(message) {
+    alert(message);
+    window.location.replace("http://localhost:5000/parts");
+}
+        </script>
+    </div>
+
+{% endblock body %}

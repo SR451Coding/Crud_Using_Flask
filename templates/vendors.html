@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div>
+        <a href="/new_vendor" class ="btn btn-dark">Add New</a><br><br>
+</div>
+    <div>
+<table>
+  <tr>
+    <th>VENDORS ID</th>
+    <th>VENDORS NAME</th>
+  </tr>
+{% for rows in rows %}
+    <tr>
+    <td>{{ rows[0] }}</td>
+    <td>{{ rows[1] }}</td>
+    <td style="width: 0px;background-color: #FFB6C1;border: none;"><a href="/delete_vendor/{{ rows[0] }}" class ="btn btn-dark">Delete</a></td>
+    <td style="width: 0px;background-color: #FFB6C1;border: none;"><a href="/update_vendor/{{ rows[0] }}" class ="btn btn-dark">Update</a></td>
+  </tr>
+  
+
+  
+{% endfor %}
+</table>
+</div>
+
+{% endblock body %}
